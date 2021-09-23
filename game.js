@@ -7,7 +7,7 @@ let state = {}
 
 function startGame() {
   state = {}
-  showTextNode(1)
+  showTextNode(0)
 }
 
 function showTextNode(textNodeIndex) {
@@ -51,11 +51,11 @@ const textNodes = [
   {
     id: 0,
     text: 'Astral Space Club GECT',
-    image: 'Earth.png',
+    image: 'astral1.png',
     options: [
       {
         text: 'Start',
-        nextText: 2
+        nextText: 1
       },
       {
         text: 'May be later!',
