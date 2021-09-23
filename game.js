@@ -201,7 +201,7 @@ const textNodes = [
   },
   {
     id: 9,
-    text: 'Astronauts have boarded the ship to Object X. What is the minimum velocity required by the rocket to gravitaional pull of Earth? ',
+    text: 'Astronauts have boarded the ship to Object X. What is the minimum velocity required by the rocket to escape the gravitaional pull of Earth? ',
     image: 'ev.jpeg',
     options: [
       {
