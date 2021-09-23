@@ -69,12 +69,12 @@ const textNodes = [
     image: 'Earth.png',
     options: [
       {
-        text: 'Are you curious? Let\'s see where it takes us',
-        nextText: 2
-      },
-      {
         text: '← Back',
         nextText: 0
+      },
+      {
+        text: 'Are you curious? Let\'s see where it takes us',
+        nextText: 2
       },
     ]
   },
