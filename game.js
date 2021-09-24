@@ -50,7 +50,7 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 0,
-    text: 'Astral Space Club GECT',
+    text: 'Space Odyssey: Online Treasure Hunt',
     image: 'astral1.png',
     options: [
       {
@@ -134,7 +134,7 @@ const textNodes = [
   {
     id: 5,
     text: 'Oh yes that\'s correct! Now back to the story.\n Thanks to the advanced technology, NASA is all geared up to send a group of researchers to Object X. Their motive is to study the object and it\'s extra-terrestrial orgins.',
-    image: 'default-image.jpg',
+    image: 'AstMining.jpeg',
     options: [
       {
         text: '← Back',
@@ -224,7 +224,7 @@ const textNodes = [
   },
   {
     id: 10,
-    text: 'You got this! Thanks to you now we are leaving Earth successfully ',
+    text: 'You got this! Thanks to you, now we are leaving Earth successfully ',
     image: 'rocket_leaving.gif',
     options: [
       {
@@ -254,19 +254,379 @@ const textNodes = [
   },
   {
     id: 12,
-    text: 'You got this! Thanks to you now we are leaving Earth successfully ',
-    image: 'rocket_leaving.gif',
+    text: 'Its a long distance journey ahead. Object X is located somewhere near Uranus at the outskirts of Solar System. But ofcourse there is plenty to explore.',
+    image: 'uranus.jpg',
     options: [
       {
         text: '← Back',
         nextText: 9
       },
       {
-        text: 'Let\'s crack the next one',
-        nextText: 12
+        text: 'Explore',
+        nextText: 13
       },
     ]
   },
+  {
+    id: 13,
+    text: 'Oh wow! We have reached Asteriod belt, the smallest and innermost known circumstellar disc in the Solar System. Do you know that about half its mass is contained in the four largest asteroids: Ceres, Vesta, Pallas, and Hygiea. Speaking of which can you guess the mass of the Asteriod belt?',
+    image: 'asteroid-belt.png',
+    options: [
+      {
+        text: '4% mass of the Sun',
+        nextText: 15
+      },
+      {
+        text: '4% mass of the Earth',
+        nextText: 15
+      },
+      {
+        text: '4% mass of the Moon',
+        nextText: 14
+      },
+      {
+        text: '4% mass of the Jupiter',
+        nextText: 15
+      },
+    ]
+  },
+  {
+    id: 14,
+    text: 'Perfection! Bye Bye Asterid belt. Next stop Jupiter',
+    image: 'asteroid-belt.png',
+    options: [
+      {
+        text: '← Back',
+        nextText: 13
+      },
+      {
+        text: 'Go to Jupiter',
+        nextText: 16
+      },
+    ]
+  },
+  {
+    id: 15,
+    text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+    image: 'default-image.jpg',
+    options: [
+      {
+        text: 'Try Again',
+        nextText: 13
+      },
+      {
+        text: 'Start from the beginning',
+        nextText: 1
+      },
+    ]
+  },
+  {
+    id: 16,
+    text: 'Jupiter, the fifth and the largest planet in the solar system. Isn\'t it beautful? It has 80 known moons but do you know which is the largest?',
+    image: 'jupiter.jpeg',
+    options: [
+      {
+        text: 'Callisto',
+        nextText: 18
+      },
+      {
+        text: 'Europa',
+        nextText: 18
+      },
+      {
+        text: 'lo',
+        nextText: 18
+      },
+      {
+        text: 'Ganymede',
+        nextText: 17
+      },
+    ]
+  },
+  {
+    id: 17,
+    text: 'Perfection! Time to bid farewell to Jupiter',
+    image: 'jupiter.jpeg',
+    options: [
+      {
+        text: '← Back',
+        nextText: 16
+      },
+      {
+        text: 'Close to destination?',
+        nextText: 19
+      },
+    ]
+  },
+  {
+    id: 18,
+    text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+    image: 'default-image.jpg',
+    options: [
+      {
+        text: 'Try Again',
+        nextText: 16
+      },
+      {
+        text: 'Start from the beginning',
+        nextText: 1
+      },
+    ]
+  },
+  {
+    id: 19,
+    text: 'We are closing in on Object X. But the crew members are quite in a perplexed state right now. Object X looks nothing like the researchers had speculated. Infact it looks more like .... an advanced spacecraft attached to a rock',
+    image: 'alienAst.jpg',
+    options: [
+      {
+        text: 'Abandon mission. Go back ',
+        nextText: 16
+      },
+      {
+        text: 'Explore the ship.',
+        nextText: 20
+      },
+    ]
+  },
+  {
+    id: 20,
+    text: 'The researchers land on Object X in the hopes of finding something relevant, but to their dismay and relief at the same time, the spaceship seems to be abandoned. The Object has been controlled automatically by some kind of advanced space race.',
+    image: 'alienAst.jpg',
+    options: [
+      {
+        text: 'Go back ',
+        nextText: 19
+      },
+      {
+        text: 'Continue',
+        nextText: 21
+      },
+    ]
+  },
+  {
+    id: 21,
+    text: 'Unfortunately one of the crew members presses a button on the ship out of curiosity causing the ship to override. All the doors in the ship gets sealed and an alien hologram like technology pops up and presents them with 4 options to choose from. They have no other choice but go with the flow.',
+    image: 'alienAst.jpg',
+    options: [
+      {
+        text: ' Go back ',
+        nextText: 20
+      },
+      {
+        text: 'Show options',
+        nextText: 22
+      },
+    ]
+  },
+  {
+    id: 22,
+    text: 'Interesting the options seems to be in some unknown language. Ready to make a guess?',
+    image: 'alienAst.jpg',
+    options: [
+      {
+        // pulsar
+        text: '⌿⎍⌰⌇⏃⍀',
+        nextText: 23
+      },
+      {
+        // BSS
+        text: '⏚⟟⋏⏃⍀⊬ ⌇⏁⏃⍀ ⌇⊬⌇⏁⟒⋔',
+        nextText: 32
+      },
+      {
+        // WDwarf
+        text: '⍙⊑⟟⏁⟒ ⎅⍙⏃⍀⎎',
+        nextText: 33
+      },
+      {
+        text: '⍙⊑⟟⏁⟒ ⎅⍙⏃⍀⎎',
+        nextText: 34
+      },
+    ]
+  },
+  {
+    id: 23,
+    text: 'Once your sensors begin to recover from the sudden change from teleportation, you notice extremely high magnetic field readings, about a million times that of the sun\'s. You also detect strong periodic pulses of electromagnetic radiation. But luckily your ship was quite over-engineered and has heavy radiation protection, but you still can\'t open the windows. This is how the intensity of radiation from the object looks like. What is this object causing this?',
+    image: 'def.jpg',
+    options: [
+      {
+        text: 'Pulsar',
+        nextText: 25
+      },
+      {
+        text: 'Red supergiants',
+        nextText: 24
+      },
+      {
+        text: 'White Dwarfs',
+        nextText: 24
+      },
+      {
+        text: 'Black holes',
+        nextText: 24
+      },
+    ]
+  },
+  {
+    id: 25,
+    text: 'That\'s right. Let\'s move on',
+    image: 'def.jpeg',
+    options: [
+      {
+        text: '← Back',
+        nextText: 23
+      },
+      {
+        text: 'Next',
+        nextText: 26
+      },
+    ]
+  },
+  {
+    id: 24,
+    text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+    image: 'default-image.jpg',
+    options: [
+      {
+        text: 'Try Again',
+        nextText: 23
+      },
+      {
+        text: 'Start from the beginning',
+        nextText: 1
+      },
+    ]
+  },
+  {
+    id: 26,
+    text: 'The physicist on-board says “This is a pulsar, these are the clocks of the universe. Their bursts are as accurate as atomic clocks. They rotate extremely fast and emit powerful radiation from their magnetic poles. They are like a lighthouse and this one happens to point straight at us! Most of the time, they are ___”',
+    image: 'def.jpg',
+    options: [
+      {
+        text: 'White dwarfs',
+        nextText: 27
+      },
+      {
+        text: 'Red supergiants',
+        nextText: 27
+      },
+      {
+        text: 'Neutron stars',
+        nextText: 28
+      },
+      {
+        text: 'Red Dwarf',
+        nextText: 27
+      },
+    ]
+  },
+  {
+    id: 28,
+    text: 'That\'s right. Let\'s move on',
+    image: 'def.jpeg',
+    options: [
+      {
+        text: '← Back',
+        nextText: 26
+      },
+      {
+        text: 'Next',
+        nextText: 29
+      },
+    ]
+  },
+  {
+    id: 27,
+    text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+    image: 'default-image.jpg',
+    options: [
+      {
+        text: 'Try Again',
+        nextText: 26
+      },
+      {
+        text: 'Start from the beginning',
+        nextText: 1
+      },
+    ]
+  },
+  {
+    id: 29,
+    text: 'He continues geeking out. “The data from these seemed so crazy that initially researchers thought they were from extraterrestrial civilizations!  The signal from the first of these, CP1919, recorded in ___ was even dubbed LGM-1 for little green men!”',
+    image: 'def.jpg',
+    options: [
+      {
+        text: '1923',
+        nextText: 31
+      },
+      {
+        text: '1947',
+        nextText: 31
+      },
+      {
+        text: '1967',
+        nextText: 30
+      },
+      {
+        text: '1986',
+        nextText: 31
+      },
+    ]
+  },
+  {
+    id: 30,
+    text: 'That\'s right. Let\'s move on',
+    image: 'def.jpeg',
+    options: [
+      {
+        text: '← Back',
+        nextText: 29
+      },
+      {
+        text: 'Next',
+        nextText: 32
+      },
+    ]
+  },
+  {
+    id: 31,
+    text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+    image: 'default-image.jpg',
+    options: [
+      {
+        text: 'Try Again',
+        nextText: 29
+      },
+      {
+        text: 'Start from the beginning',
+        nextText: 1
+      },
+    ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   {
     id: 2,
     text: 'But before they venture forth they have to solve a set of problems. Let\'s address them one by one.',
@@ -288,103 +648,7 @@ const textNodes = [
         nextText: 3
       }
     ]
-  },
-  
-  {
-    id: 4,
-    text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
-    options: [
-      {
-        text: 'Restart',
-        nextText: -1
-      }
-    ]
-  },
-  {
-    id: 5,
-    text: 'Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.',
-    options: [
-      {
-        text: 'Restart',
-        nextText: -1
-      }
-    ]
-  },
-  {
-    id: 6,
-    text: 'You wake up well rested and full of energy ready to explore the nearby castle.',
-    options: [
-      {
-        text: 'Explore the castle',
-        nextText: 7
-      }
-    ]
-  },
-  {
-    id: 7,
-    text: 'While exploring the castle you come across a horrible monster in your path.',
-    options: [
-      {
-        text: 'Try to run',
-        nextText: 8
-      },
-      {
-        text: 'Attack it with your sword',
-        requiredState: (currentState) => currentState.sword,
-        nextText: 9
-      },
-      {
-        text: 'Hide behind your shield',
-        requiredState: (currentState) => currentState.shield,
-        nextText: 10
-      },
-      {
-        text: 'Throw the blue goo at it',
-        requiredState: (currentState) => currentState.blueGoo,
-        nextText: 11
-      }
-    ]
-  },
-  {
-    id: 8,
-    text: 'Your attempts to run are in vain and the monster easily catches.',
-    options: [
-      {
-        text: 'Restart',
-        nextText: -1
-      }
-    ]
-  },
-  {
-    id: 9,
-    text: 'You foolishly thought this monster could be slain with a single sword.',
-    options: [
-      {
-        text: 'Restart',
-        nextText: -1
-      }
-    ]
-  },
-  {
-    id: 10,
-    text: 'The monster laughed as you hid behind your shield and ate you.',
-    options: [
-      {
-        text: 'Restart',
-        nextText: -1
-      }
-    ]
-  },
-  {
-    id: 11,
-    text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
-    options: [
-      {
-        text: 'Congratulations. Play Again.',
-        nextText: -1
-      }
-    ]
-  }
+  },  
 ]
 
 startGame()
