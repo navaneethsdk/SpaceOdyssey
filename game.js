@@ -1909,7 +1909,7 @@ const textNodes = [
   options: [
     {
       text: '← Back',
-      nextText: 96
+      nextText: 99
     },
     {
       text: 'Next',
@@ -1924,7 +1924,7 @@ const textNodes = [
   options: [
     {
       text: 'Try Again',
-      nextText: 96
+      nextText: 99
     },
     {
       text: 'Start from the beginning',
