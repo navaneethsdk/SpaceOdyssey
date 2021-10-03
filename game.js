@@ -323,7 +323,7 @@ const textNodes = [
   {
     id: 16,
     text: 'Jupiter, the fifth and the largest planet in the solar system. Isn\'t it beautful? It has 80 known moons but do you know which is the largest?',
-    image: 'jupiter.jpeg',
+    image: 'jupiter.png',
     options: [
       {
         text: 'Callisto',
@@ -418,34 +418,49 @@ const textNodes = [
       },
     ]
   },
-  // // Meeting point 1
-  // {
-  //   id: 75,
-  //   text: 'Lets call this point \'The Great Turn 1\'. Do you think an option is missing? Try completing the rest of the journey and uncover all the clues. May be the last option would be present then.',
-  //   image: 'alienAst.jpg',
-  //   options: [
-  //     {
-  //       // exo planets
-  //       text: '⟒⌖⍜⌿⌰⏃⋏⟒⏁⌇',
-  //       nextText: 23
-  //     },
-  //     {
-  //       // BSS
-  //       text: '⏚⟟⋏⏃⍀⊬ ⌇⏁⏃⍀ ⌇⊬⌇⏁⟒⋔',
-  //       nextText: 38
-  //     },
-  //     {
-  //       // Set of options
-  //       text: 'Move to the next rendezvous point',
-  //       nextText: 50
-  //     },
-  //     {
-  //       // Nebula
-  //       text: '⋏⟒⏚⎍⌰⏃',
-  //       nextText: 62
-  //     },
-  //   ]
-  // },
+  // Meeting point 1
+  {
+    id: 123,
+    text: 'Hmm... I guess we are now presented with another set of 4 alien language options. I think this might be it! Let\'s get going...',
+    image: 'alienAst.jpg',
+    options: [
+      {
+        // exo planets
+        text: '⟒⌖⍜⌿⌰⏃⋏⟒⏁⌇',
+        requiredState: (currentState) => !currentState.EP,
+        setState: { EP: true},
+        nextText: 90
+      },
+      {
+        // Neutron
+        text: '⋏⟒⎍⏁⍀⍜⋏ ⌇⏁⏃⍀',
+        requiredState: (currentState) => !currentState.NEU,
+        setState: { NEU: true},
+        nextText: 75
+      },
+      {
+        // Red Sup
+        text: '⍀⟒⎅ ⌇⎍⌿⟒⍀☌⟟⏃⋏⏁',
+        requiredState: (currentState) => !currentState.RS,
+        setState: { RS: true},
+        nextText: 102
+      },
+      {
+        // SAG
+        text: '⌇⏃☌⟟⏁⏁⏃⍀⟟⎍⌇ ⏃*',
+        requiredState: (currentState) => !currentState.SAG,
+        setState: { SAG: true},
+        nextText: 114
+      },
+      {
+        // Move to Path 2
+        text : 'I think you have reached the end of the journey!!.',
+        requiredState: (currentState) => currentState.EP && currentState.RS && currentState.SAG && currentState.NEU,
+        setState: { P2F: true},
+        nextText: 123
+      }
+    ]
+  },
   // Meeting point 2
   {
     id: 22,
@@ -455,23 +470,38 @@ const textNodes = [
       {
         // pulsar
         text: '⌿⎍⌰⌇⏃⍀',
+        requiredState: (currentState) => !currentState.PUL,
+        setState: { PUL: true},
         nextText: 23
       },
       {
         // BSS
         text: '⏚⟟⋏⏃⍀⊬ ⌇⏁⏃⍀ ⌇⊬⌇⏁⟒⋔',
+        requiredState: (currentState) => !currentState.BSS,
+        setState: { BSS: true},
         nextText: 38
       },
       {
         // WDwarf
         text: '⍙⊑⟟⏁⟒ ⎅⍙⏃⍀⎎',
+        requiredState: (currentState) => !currentState.WD,
+        setState: { WD: true},
         nextText: 50
       },
       {
         // Nebula
         text: '⋏⟒⏚⎍⌰⏃',
+        requiredState: (currentState) => !currentState.NEB,
+        setState: { NEB: true},
         nextText: 62
       },
+      {
+        // Move to Path 2
+        text : 'Move to the next meeting point.',
+        requiredState: (currentState) => currentState.WD && currentState.NEB && currentState.BSS && currentState.PUL,
+        setState: { P1F: true},
+        nextText: 123
+      }
     ]
   },
 
@@ -479,7 +509,7 @@ const textNodes = [
   {
     id: 23,
     text: 'Once your sensors begin to recover from the sudden change from teleportation, you notice extremely high magnetic field readings, about a million times that of the sun\'s. You also detect strong periodic pulses of electromagnetic radiation. But luckily your ship was quite over-engineered and has heavy radiation protection, but you still can\'t open the windows. This is how the intensity of radiation from the object looks like. What is this object causing this?',
-    image: 'default-image.jpg',
+    image: 'PUL1.gif',
     options: [
       {
         text: 'Pulsar',
@@ -502,7 +532,7 @@ const textNodes = [
   {
     id: 25,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'PUL1.gif',
     options: [
       {
         text: '← Back',
@@ -534,7 +564,7 @@ const textNodes = [
   {
     id: 26,
     text: 'The physicist on-board says “This is a pulsar, these are the clocks of the universe. Their bursts are as accurate as atomic clocks. They rotate extremely fast and emit powerful radiation from their magnetic poles. They are like a lighthouse and this one happens to point straight at us! Most of the time, they are ___”',
-    image: 'def.jpg',
+    image: 'PUL2.gif',
     options: [
       {
         text: 'White dwarfs',
@@ -557,7 +587,7 @@ const textNodes = [
   {
     id: 28,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'PUL2.gif',
     options: [
       {
         text: '← Back',
@@ -589,7 +619,7 @@ const textNodes = [
   {
     id: 29,
     text: 'He continues geeking out. “The data from these seemed so crazy that initially researchers thought they were from extraterrestrial civilizations!  The signal from the first of these, CP1919, recorded in ___ was even dubbed LGM-1 for little green men!”',
-    image: 'default-image.jpg',
+    image: 'PUL3.jpeg',
     options: [
       {
         text: '1923',
@@ -612,7 +642,7 @@ const textNodes = [
   {
     id: 30,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'PUL3.jpeg',
     options: [
       {
         text: '← Back',
@@ -644,7 +674,7 @@ const textNodes = [
   {
     id: 32,
     text: 'Being neutron stars, they are incredibly dense and small, and rotate incredibly fast for something of this scale.This generates electric fields from strong varying magnetic fields, resulting in the acceleration of charged particles on the star surface, generating strong electromagnetic fields from the poles. The electromagnetic energy released is obtained from the rotational energy, so they eventually slow down. Pulsars last about ___ years before being too slow and “turning off”.',
-    image: 'default-image.jpg',
+    image: 'PUL4.jpeg',
     options: [
       {
         text: '10-100 billion',
@@ -667,7 +697,7 @@ const textNodes = [
   {
     id: 33,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'PUL4.jpeg',
     options: [
       {
         text: '← Back',
@@ -699,7 +729,7 @@ const textNodes = [
   {
     id: 35,
     text: 'White dwarfs can also be pulsars, the physicist says. But, since they are much less dense, their moment of inertia is much larger and so their rotation period is ___ than neutron star pulsars and are much rarer. The first one was found in ___.    ',
-    image: 'default-image.jpg',
+    image: 'PUL5.jpeg',
     options: [
       {
         text: 'Higher, 1997',
@@ -722,7 +752,7 @@ const textNodes = [
   {
     id: 36,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'PUL5.jpeg',
     options: [
       {
         text: '← Back',
@@ -777,7 +807,7 @@ const textNodes = [
   {
     id: 39,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'BS1.jpg',
     options: [
       {
         text: '← Back',
@@ -832,7 +862,7 @@ const textNodes = [
   {
     id: 42,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'BS2.jpg',
     options: [
       {
         text: '← Back',
@@ -887,7 +917,7 @@ const textNodes = [
   {
     id: 46,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'BS23.gif',
     options: [
       {
         text: '← Back',
@@ -941,7 +971,7 @@ const textNodes = [
   {
     id: 49,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'BS3.jpg',
     options: [
       {
         text: '← Back',
@@ -1223,7 +1253,7 @@ const textNodes = [
       },
       {
         text: 'Next',
-        nextText: 65
+        nextText: 66
       },
     ]
   },
@@ -1383,11 +1413,11 @@ const textNodes = [
     options: [
       {
         text: '← Back',
-        nextText: 69
+        nextText: 72
       },
       {
         text: 'Next',
-        nextText: 75
+        nextText: 22
       },
     ]
   },
@@ -1398,7 +1428,7 @@ const textNodes = [
     options: [
       {
         text: 'Try Again',
-        nextText: 69
+        nextText: 72
       },
       {
         text: 'Start from the beginning',
@@ -1407,7 +1437,945 @@ const textNodes = [
     ]
   },
 
+   // Neutron 1
+   {
+    id: 75,
+    text: 'We are travelling above the plane of the galaxy . How could we possibly see a neutron star? I think It might be ___',
+    image: 'NS1.jpeg',
+    options: [
+      {
+        text: 'Lee',
+        nextText: 76
+      },
+      {
+        text: 'Britt',
+        nextText: 76
+      },
+      {
+        text: 'Calvera',
+        nextText: 77
+      },
+      {
+        text: 'Chico',
+        nextText: 76
+      },
+    ]
+  },
+  {
+    id: 77,
+    text: 'That\'s right. Let\'s move on',
+    image: 'default-image.jpg',
+    options: [
+      {
+        text: '← Back',
+        nextText: 75
+      },
+      {
+        text: 'Next',
+        nextText: 78
+      },
+    ]
+  },
+  {
+    id: 76,
+    text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+    image: 'default-image.jpg',
+    options: [
+      {
+        text: 'Try Again',
+        nextText: 75
+      },
+      {
+        text: 'Start from the beginning',
+        nextText: 1
+      },
+    ]
+  },
 
+  // Neutron 2
+  {
+    id: 78,
+    text: 'We are now at the Serpens constellation. So that means we should now be able to find oversized blackhole at _____',
+    image: 'NS2.jpeg',
+    options: [
+      {
+        text: 'Red Square Nebula',
+        nextText: 79
+      },
+      {
+        text: 'Palomar 5',
+        nextText: 80
+      },
+      {
+        text: 'Messier 5',
+        nextText: 79
+      },
+      {
+        text: 'None of the above',
+        nextText: 79
+      },
+    ]
+  },
+  {
+    id: 80,
+    text: 'That\'s right. Let\'s move on',
+    image: 'default-image.jpg',
+    options: [
+      {
+        text: '← Back',
+        nextText: 78
+      },
+      {
+        text: 'Next',
+        nextText: 81
+      },
+    ]
+  },
+  {
+    id: 79,
+    text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+    image: 'default-image.jpg',
+    options: [
+      {
+        text: 'Try Again',
+        nextText: 78
+      },
+      {
+        text: 'Start from the beginning',
+        nextText: 1
+      },
+    ]
+  },
+
+// Neutron 3
+{
+  id: 81,
+  text: 'Do you see that bright light shining. I think it is two neutron star merging together. Do you know the name of this astronomical event?',
+  image: 'NS3.jpeg',
+  options: [
+    {
+      text: 'Supernova',
+      nextText: 82
+    },
+    {
+      text: 'Kilonova',
+      nextText: 83
+    },
+    {
+      text: 'Collapser',
+      nextText: 82
+    },
+    {
+      text: 'None of the above',
+      nextText: 82
+    },
+  ]
+},
+{
+  id: 83,
+  text: 'That\'s right. Let\'s move on',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: '← Back',
+      nextText: 81
+    },
+    {
+      text: 'Next',
+      nextText: 84
+    },
+  ]
+},
+{
+  id: 82,
+  text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: 'Try Again',
+      nextText: 81
+    },
+    {
+      text: 'Start from the beginning',
+      nextText: 1
+    },
+  ]
+},
+
+// Neutron 4
+{
+  id: 84,
+  text: 'The particle present in the core of a neutron star is called __',
+  image: 'NS4.jpeg',
+  options: [
+    {
+      text: 'Neutron',
+      nextText: 85
+    },
+    {
+      text: 'Electron',
+      nextText: 85
+    },
+    {
+      text: 'Hyperons',
+      nextText: 86
+    },
+    {
+      text: 'None of the above',
+      nextText: 85
+    },
+  ]
+},
+{
+  id: 86,
+  text: 'That\'s right. Let\'s move on',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: '← Back',
+      nextText: 84
+    },
+    {
+      text: 'Next',
+      nextText: 87
+    },
+  ]
+},
+{
+  id: 85,
+  text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: 'Try Again',
+      nextText: 84
+    },
+    {
+      text: 'Start from the beginning',
+      nextText: 1
+    },
+  ]
+},
+
+// Neutron 5
+{
+  id: 87,
+  text: 'It seems that a Neutron star is like a giant nucleus with a few kms of radius although they owe their existence to something majestic. What can you relate a neutron star with?',
+  image: 'NS5.jpeg',
+  options: [
+    {
+      text: 'A city',
+      nextText: 89
+    },
+    {
+      text: 'Size of a basketball',
+      nextText: 88
+    },
+    {
+      text: 'United States of America',
+      nextText: 88
+    },
+    {
+      text: 'A bus',
+      nextText: 88
+    },
+  ]
+},
+{
+  id: 89,
+  text: 'That\'s right. Let\'s move on',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: '← Back',
+      nextText: 87
+    },
+    {
+      text: 'Next',
+      nextText: 123
+    },
+  ]
+},
+{
+  id: 88,
+  text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: 'Try Again',
+      nextText: 87
+    },
+    {
+      text: 'Start from the beginning',
+      nextText: 1
+    },
+  ]
+},
+
+// Exp 1
+{
+  id: 90,
+  text: 'A NASA observatory designed to settle essential questions in the areas of dark energy, exoplanets, and infrared astrophysics is ?',
+  image: 'Exp1.jpeg',
+  options: [
+    {
+      text: 'The Compton Gamma Ray Observatory (CGRO)',
+      nextText: 92
+    },
+    {
+      text: 'Nancy Grace Roman Space Telescope',
+      nextText: 91
+    },
+    {
+      text: 'The Spitzer Space Telescope',
+      nextText: 92
+    },
+    {
+      text: 'None of the above',
+      nextText: 92
+    },
+  ]
+},
+{
+  id: 91,
+  text: 'That\'s right. Let\'s move on',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: '← Back',
+      nextText: 90
+    },
+    {
+      text: 'Next',
+      nextText: 96
+    },
+  ]
+},
+{
+  id: 92,
+  text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: 'Try Again',
+      nextText: 90
+    },
+    {
+      text: 'Start from the beginning',
+      nextText: 1
+    },
+  ]
+},
+  
+
+// Exp 2
+{
+  id: 93,
+  text: 'On their journey the crew identified a signal indicating blue shift. They realised that this indication was from an instrument using doppler spectroscopy ( radial velocity method). This implies the presence of ?',
+  image: 'Exp2.jpeg',
+  options: [
+    {
+      text: 'International Space Station',
+      nextText: 94
+    },
+    {
+      text: 'Asteroid',
+      nextText: 94
+    },
+    {
+      text: 'Comets',
+      nextText: 94
+    },
+    {
+      text: 'Exoplanets',
+      nextText: 95
+    },
+  ]
+},
+{
+  id: 95,
+  text: 'That\'s right. Let\'s move on',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: '← Back',
+      nextText: 93
+    },
+    {
+      text: 'Next',
+      nextText: 90
+    },
+  ]
+},
+{
+  id: 94,
+  text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: 'Try Again',
+      nextText: 93
+    },
+    {
+      text: 'Start from the beginning',
+      nextText: 1
+    },
+  ]
+},
+
+// Exp 3
+{
+  id: 96,
+  text: 'For life to exist on a planet, presence of water is vital.The area around a star where water can exist on surface of a planet is prone to be habitable.In scientific terms such a zone is called....',
+  image: 'Exp3.jpeg',
+  options: [
+    {
+      text: 'Lacustrine zone',
+      nextText: 97
+    },
+    {
+      text: 'Goldilocks zone',
+      nextText: 98
+    },
+    {
+      text: 'Fluvio-glacial zone',
+      nextText: 97
+    },
+    {
+      text: 'None of the above',
+      nextText: 97
+    },
+  ]
+},
+{
+  id: 98,
+  text: 'That\'s right. Let\'s move on',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: '← Back',
+      nextText: 96
+    },
+    {
+      text: 'Next',
+      nextText: 99
+    },
+  ]
+},
+{
+  id: 97,
+  text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: 'Try Again',
+      nextText: 96
+    },
+    {
+      text: 'Start from the beginning',
+      nextText: 1
+    },
+  ]
+},
+
+// Exp 4
+{
+  id: 99,
+  text: 'Indirect methods like transit method have helped in detection of about 3500 exoplanets.Now the technology have advanced and improvised direct methods are being in use for the search of exoplanets.But their efficiency is limited by overwhelming glare of stars.Inorder to overcome this effect the new technology being in use is?',
+  image: 'Exp5.jpeg',
+  options: [
+    {
+      text: 'Coronagraphy',
+      nextText: 101
+    },
+    {
+      text: 'Microlensing',
+      nextText: 100
+    },
+    {
+      text: 'Astrometry',
+      nextText: 100
+    },
+    {
+      text: 'None of the above',
+      nextText: 100
+    },
+  ]
+},
+{
+  id: 101,
+  text: 'That\'s right. Let\'s move on',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: '← Back',
+      nextText: 96
+    },
+    {
+      text: 'Next',
+      nextText: 123
+    },
+  ]
+},
+{
+  id: 100,
+  text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: 'Try Again',
+      nextText: 96
+    },
+    {
+      text: 'Start from the beginning',
+      nextText: 1
+    },
+  ]
+},
+  
+// RS 1
+{
+  id: 102,
+  text: 'The Ship is now orbiting around a really massive star. The onboard computer says that the star is way cooler than the Sun yet it is more than hundred times the size of Sun. What type of star is this?',
+  image: 'RS1.jpg',
+  options: [
+    {
+      text: 'Blue Supergiant',
+      nextText: 103
+    },
+    {
+      text: 'Blue Hypergiant',
+      nextText: 103
+    },
+    {
+      text: 'Red Supergiant',
+      nextText: 104
+    },
+    {
+      text: 'Brown Supergiant',
+      nextText: 103
+    },
+  ]
+},
+{
+  id: 104,
+  text: 'That\'s right. Let\'s move on',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: '← Back',
+      nextText: 102
+    },
+    {
+      text: 'Next',
+      nextText: 105
+    },
+  ]
+},
+{
+  id: 103,
+  text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: 'Try Again',
+      nextText: 102
+    },
+    {
+      text: 'Start from the beginning',
+      nextText: 1
+    },
+  ]
+},
+  
+// RS 2
+{
+  id: 105,
+  text: 'Red Supergiant are usually formed from main sequence of masses of the range of ______.(Mass of Sun is taken as MO).',
+  image: 'RS2.png',
+  options: [
+    {
+      text: '2 MO to 6 MO',
+      nextText: 106
+    },
+    {
+      text: '8 MO to 30 MO',
+      nextText: 106
+    },
+    {
+      text: '45 MO to 50 MO',
+      nextText: 107
+    },
+    {
+      text: '9 MO to 12 MO',
+      nextText: 106
+    },
+  ]
+},
+{
+  id: 107,
+  text: 'That\'s right. Let\'s move on',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: '← Back',
+      nextText: 105
+    },
+    {
+      text: 'Next',
+      nextText: 108
+    },
+  ]
+},
+{
+  id: 106,
+  text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: 'Try Again',
+      nextText: 105
+    },
+    {
+      text: 'Start from the beginning',
+      nextText: 1
+    },
+  ]
+},
+
+// RS 3
+{
+  id: 108,
+  text: 'Which of these is not a supergiant?',
+  image: 'RS3.jpg',
+  options: [
+    {
+      text: 'Betelgeuse',
+      nextText: 109
+    },
+    {
+      text: 'V Y Canis Majoris',
+      nextText: 109
+    },
+    {
+      text: 'Mu Ceiphei',
+      nextText: 110
+    },
+    {
+      text: 'Antares',
+      nextText: 109
+    },
+  ]
+},
+{
+  id: 110,
+  text: 'That\'s right. Let\'s move on',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: '← Back',
+      nextText: 108
+    },
+    {
+      text: 'Next',
+      nextText: 111
+    },
+  ]
+},
+{
+  id: 109,
+  text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: 'Try Again',
+      nextText: 108
+    },
+    {
+      text: 'Start from the beginning',
+      nextText: 1
+    },
+  ]
+},
+
+// RS 4
+{
+  id: 111,
+  text: 'Which of these is an Orange Supergiant and why are they so?',
+  image: 'RS4.jpg',
+  options: [
+    {
+      text: 'Zeta Ceiphei, because it\'s a hotter K-type Star',
+      nextText: 112
+    },
+    {
+      text: 'Mu Ceiphei, because it crosses Chandrashekhar Limit',
+      nextText: 112
+    },
+    {
+      text: 'Antares, because it is 600 times massive than the Sun',
+      nextText: 113
+    },
+    {
+      text: 'Sirius, Because it\'s a bright object in the night sky',
+      nextText: 112
+    },
+  ]
+},
+{
+  id: 113,
+  text: 'That\'s right. Let\'s move on',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: '← Back',
+      nextText: 111
+    },
+    {
+      text: 'Next',
+      nextText: 123
+    },
+  ]
+},
+{
+  id: 112,
+  text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: 'Try Again',
+      nextText: 111
+    },
+    {
+      text: 'Start from the beginning',
+      nextText: 1
+    },
+  ]
+},
+
+// SAG 1
+{
+  id: 114,
+  text: 'The size comparison to sun will be futile it\'s hundreds of thousands of billions of times the mass of the sun . We should be lucky to see it this close , it\'s also known as',
+  image: 'SAG1.jpeg',
+  options: [
+    {
+      text: 'Einstein- Rosen bridge',
+      nextText: 115
+    },
+    {
+      text: 'Black holes',
+      nextText: 115
+    },
+    {
+      text: 'Dimensional portal',
+      nextText: 116
+    },
+    {
+      text: 'Quasi stellar objects',
+      nextText: 115
+    },
+  ]
+},
+{
+  id: 116,
+  text: 'That\'s right. Let\'s move on',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: '← Back',
+      nextText: 114
+    },
+    {
+      text: 'Next',
+      nextText: 117
+    },
+  ]
+},
+{
+  id: 115,
+  text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: 'Try Again',
+      nextText: 114
+    },
+    {
+      text: 'Start from the beginning',
+      nextText: 1
+    },
+  ]
+},
+
+// SAG 2
+{
+  id: 117,
+  text: 'Measurements shows that it has a radius of 22mn kilometres . Our habitat is 8 kilo parsec from sag A* , it\'s mass is enormous it can completely stretch out the space time fabric , each minute we spent here it\'s __ in Earth',
+  image: 'RS4.jpg',
+  options: [
+    {
+      text: '700 years',
+      nextText: 119
+    },
+    {
+      text: '10 years',
+      nextText: 118
+    },
+    {
+      text: '100 years',
+      nextText: 118
+    },
+    {
+      text: '1 mn years',
+      nextText: 118
+    },
+  ]
+},
+{
+  id: 119,
+  text: 'That\'s right. Let\'s move on',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: '← Back',
+      nextText: 117
+    },
+    {
+      text: 'Next',
+      nextText: 120
+    },
+  ]
+},
+{
+  id: 118,
+  text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: 'Try Again',
+      nextText: 117
+    },
+    {
+      text: 'Start from the beginning',
+      nextText: 1
+    },
+  ]
+},
+
+// SAG 3
+{
+  id: 120,
+  text: 'Beep beep !!! The energy X ray flare are increasing . What is causing the  increase in flares ? ',
+  image: 'RS4.jpg',
+  options: [
+    {
+      text: 'Dark halo',
+      nextText: 121
+    },
+    {
+      text: 'Passing asteroid',
+      nextText: 122
+    },
+    {
+      text: 'WIMPS outflux',
+      nextText: 121
+    },
+    {
+      text: 'GRB',
+      nextText: 121
+    },
+  ]
+},
+{
+  id: 122,
+  text: 'That\'s right. Let\'s move on',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: '← Back',
+      nextText: 120
+    },
+    {
+      text: 'Next',
+      nextText: 123
+    },
+  ]
+},
+{
+  id: 121,
+  text: 'Oops! That did not go as planned. Let\'s give it one more shot',
+  image: 'default-image.jpg',
+  options: [
+    {
+      text: 'Try Again',
+      nextText: 120
+    },
+    {
+      text: 'Start from the beginning',
+      nextText: 1
+    },
+  ]
+},
+
+
+// CLUES
+{
+  id: 124,
+  text: 'Wait I guess it\'s a <b>clue</b>! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  image: 'Clue1.jpg',
+  options: [
+    
+  ]
+},
+{
+  id: 125,
+  text: 'Oh its another <b>clue</b>! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  image: 'Clue2.png',
+  options: [
+    
+  ]
+},
+{
+  id: 126,
+  text: 'There\'s another <b>clue</b>! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  image: 'Clue3.png',
+  options: [
+    
+  ]
+},
+{
+  id: 127,
+  text: 'There\'s another <b>clue</b>! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  image: 'Clue4.jpg',
+  options: [
+    
+  ]
+},
+{
+  id: 128,
+  text: 'There\'s another <b>clue</b>! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  image: 'Clue5.jpg',
+  options: [
+    
+  ]
+},
+{
+  id: 129,
+  text: 'There\'s another <b>clue</b>! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  image: 'Clue6.jpg',
+  options: [
+    
+  ]
+},
+{
+  id: 130,
+  text: 'There\'s another <b>clue</b>! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  image: 'Clue7.png',
+  options: [
+    
+  ]
+},
 
 
 
