@@ -50,7 +50,7 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 0,
-    text: 'Space Odyssey: Online Treasure Hunt',
+    text: 'Space Odyssey: Online Treasure Hunt \n Fill the form before you start \n https://forms.gle/cfxtTFvN8LG1sC239',
     image: 'astral1.png',
     options: [
       {
@@ -2169,11 +2169,11 @@ const textNodes = [
     },
     {
       text: 'Dimensional portal',
-      nextText: 116
+      nextText: 115
     },
     {
       text: 'Quasi stellar objects',
-      nextText: 115
+      nextText: 116
     },
   ]
 },
