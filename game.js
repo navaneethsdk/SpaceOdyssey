@@ -346,7 +346,7 @@ const textNodes = [
   {
     id: 17,
     text: 'Perfection! Time to bid farewell to Jupiter',
-    image: 'jupiter.jpeg',
+    image: 'jupiter.png',
     options: [
       {
         text: '← Back',
@@ -453,11 +453,11 @@ const textNodes = [
         nextText: 114
       },
       {
-        // Move to Path 2
+        // Move to docs
         text : 'I think you have reached the end of the journey!!.',
         requiredState: (currentState) => currentState.EP && currentState.RS && currentState.SAG && currentState.NEU,
         setState: { P2F: true},
-        nextText: 123
+        nextText: 132
       }
     ]
   },
@@ -497,7 +497,7 @@ const textNodes = [
       },
       {
         // Move to Path 2
-        text : 'Move to the next meeting point.',
+        text : 'Display next set of coordinates.',
         requiredState: (currentState) => currentState.WD && currentState.NEB && currentState.BSS && currentState.PUL,
         setState: { P1F: true},
         nextText: 123
@@ -760,7 +760,7 @@ const textNodes = [
       },
       {
         text: 'Next',
-        nextText: 22
+        nextText: 131
       },
     ]
   },
@@ -894,7 +894,7 @@ const textNodes = [
   {
     id: 44,
     text: 'The binary star system you are witnessing is 4U 1820-30 composed of neutron star and white dwarf with neutron  and electron degeneracy pressures. The white dwarf gains in size through mass transfer forming an accretion disc and finally explodes releasing binding energy converting into K.E and lunlminosity . This is called as',
-    image: 'BS23.gif',
+    image: 'BSS23.gif',
     options: [
       {
         text: 'Carbon explosion',
@@ -917,7 +917,7 @@ const textNodes = [
   {
     id: 46,
     text: 'That\'s right. Let\'s move on',
-    image: 'BS23.gif',
+    image: 'BSS23.gif',
     options: [
       {
         text: '← Back',
@@ -979,7 +979,7 @@ const textNodes = [
       },
       {
         text: 'Next',
-        nextText: 22
+        nextText: 130
       },
     ]
   },
@@ -1026,7 +1026,7 @@ const textNodes = [
   {
     id: 52,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'WD1.jpeg',
     options: [
       {
         text: '← Back',
@@ -1081,7 +1081,7 @@ const textNodes = [
   {
     id: 55,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'WD2.jpeg',
     options: [
       {
         text: '← Back',
@@ -1124,7 +1124,7 @@ const textNodes = [
         nextText: 57
       },
       {
-        text: 'Eridani B, 8.3 light years',
+        text: 'Eridani B, 5.4 light years',
         nextText: 57
       },
       {
@@ -1136,7 +1136,7 @@ const textNodes = [
   {
     id: 58,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'WD3.jpeg',
     options: [
       {
         text: '← Back',
@@ -1190,7 +1190,7 @@ const textNodes = [
   {
     id: 61,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'WD2.jpeg',
     options: [
       {
         text: '← Back',
@@ -1198,7 +1198,7 @@ const textNodes = [
       },
       {
         text: 'Next',
-        nextText: 22
+        nextText: 129
       },
     ]
   },
@@ -1245,7 +1245,7 @@ const textNodes = [
   {
     id: 64,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'Neb1.png',
     options: [
       {
         text: '← Back',
@@ -1299,7 +1299,7 @@ const textNodes = [
   {
     id: 68,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'Neb2.png',
     options: [
       {
         text: '← Back',
@@ -1354,7 +1354,7 @@ const textNodes = [
   {
     id: 71,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'Ne3.jpg',
     options: [
       {
         text: '← Back',
@@ -1409,7 +1409,7 @@ const textNodes = [
   {
     id: 74,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'Neb4.png',
     options: [
       {
         text: '← Back',
@@ -1417,7 +1417,7 @@ const textNodes = [
       },
       {
         text: 'Next',
-        nextText: 22
+        nextText: 128
       },
     ]
   },
@@ -1464,7 +1464,7 @@ const textNodes = [
   {
     id: 77,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'NS1.jpeg',
     options: [
       {
         text: '← Back',
@@ -1519,7 +1519,7 @@ const textNodes = [
   {
     id: 80,
     text: 'That\'s right. Let\'s move on',
-    image: 'default-image.jpg',
+    image: 'NS2.jpeg',
     options: [
       {
         text: '← Back',
@@ -1574,7 +1574,7 @@ const textNodes = [
 {
   id: 83,
   text: 'That\'s right. Let\'s move on',
-  image: 'default-image.jpg',
+  image: 'NS3.jpeg',
   options: [
     {
       text: '← Back',
@@ -1629,7 +1629,7 @@ const textNodes = [
 {
   id: 86,
   text: 'That\'s right. Let\'s move on',
-  image: 'default-image.jpg',
+  image: 'NS4.jpeg',
   options: [
     {
       text: '← Back',
@@ -1684,7 +1684,7 @@ const textNodes = [
 {
   id: 89,
   text: 'That\'s right. Let\'s move on',
-  image: 'default-image.jpg',
+  image: 'NS5.jpeg',
   options: [
     {
       text: '← Back',
@@ -1692,7 +1692,7 @@ const textNodes = [
     },
     {
       text: 'Next',
-      nextText: 123
+      nextText: 127
     },
   ]
 },
@@ -1739,7 +1739,7 @@ const textNodes = [
 {
   id: 91,
   text: 'That\'s right. Let\'s move on',
-  image: 'default-image.jpg',
+  image: 'Exp1.jpeg',
   options: [
     {
       text: '← Back',
@@ -1795,7 +1795,7 @@ const textNodes = [
 {
   id: 95,
   text: 'That\'s right. Let\'s move on',
-  image: 'default-image.jpg',
+  image: 'Exp2.jpeg',
   options: [
     {
       text: '← Back',
@@ -1850,7 +1850,7 @@ const textNodes = [
 {
   id: 98,
   text: 'That\'s right. Let\'s move on',
-  image: 'default-image.jpg',
+  image: 'Exp3.jpeg',
   options: [
     {
       text: '← Back',
@@ -1905,7 +1905,7 @@ const textNodes = [
 {
   id: 101,
   text: 'That\'s right. Let\'s move on',
-  image: 'default-image.jpg',
+  image: 'Exp5.jpeg',
   options: [
     {
       text: '← Back',
@@ -1913,7 +1913,7 @@ const textNodes = [
     },
     {
       text: 'Next',
-      nextText: 123
+      nextText: 126
     },
   ]
 },
@@ -1960,7 +1960,7 @@ const textNodes = [
 {
   id: 104,
   text: 'That\'s right. Let\'s move on',
-  image: 'default-image.jpg',
+  image: 'RS1.jpg',
   options: [
     {
       text: '← Back',
@@ -2000,11 +2000,11 @@ const textNodes = [
     },
     {
       text: '8 MO to 30 MO',
-      nextText: 106
+      nextText: 107
     },
     {
       text: '45 MO to 50 MO',
-      nextText: 107
+      nextText: 106
     },
     {
       text: '9 MO to 12 MO',
@@ -2015,7 +2015,7 @@ const textNodes = [
 {
   id: 107,
   text: 'That\'s right. Let\'s move on',
-  image: 'default-image.jpg',
+  image: 'RS2.png',
   options: [
     {
       text: '← Back',
@@ -2055,11 +2055,11 @@ const textNodes = [
     },
     {
       text: 'V Y Canis Majoris',
-      nextText: 109
+      nextText: 110
     },
     {
       text: 'Mu Ceiphei',
-      nextText: 110
+      nextText: 109
     },
     {
       text: 'Antares',
@@ -2070,7 +2070,7 @@ const textNodes = [
 {
   id: 110,
   text: 'That\'s right. Let\'s move on',
-  image: 'default-image.jpg',
+  image: 'RS3.jpg',
   options: [
     {
       text: '← Back',
@@ -2106,7 +2106,7 @@ const textNodes = [
   options: [
     {
       text: 'Zeta Ceiphei, because it\'s a hotter K-type Star',
-      nextText: 112
+      nextText: 113
     },
     {
       text: 'Mu Ceiphei, because it crosses Chandrashekhar Limit',
@@ -2114,7 +2114,7 @@ const textNodes = [
     },
     {
       text: 'Antares, because it is 600 times massive than the Sun',
-      nextText: 113
+      nextText: 112
     },
     {
       text: 'Sirius, Because it\'s a bright object in the night sky',
@@ -2125,7 +2125,7 @@ const textNodes = [
 {
   id: 113,
   text: 'That\'s right. Let\'s move on',
-  image: 'default-image.jpg',
+  image: 'RS4.jpg',
   options: [
     {
       text: '← Back',
@@ -2133,7 +2133,7 @@ const textNodes = [
     },
     {
       text: 'Next',
-      nextText: 123
+      nextText: 125
     },
   ]
 },
@@ -2180,7 +2180,7 @@ const textNodes = [
 {
   id: 116,
   text: 'That\'s right. Let\'s move on',
-  image: 'default-image.jpg',
+  image: 'SAG1.jpeg',
   options: [
     {
       text: '← Back',
@@ -2212,7 +2212,7 @@ const textNodes = [
 {
   id: 117,
   text: 'Measurements shows that it has a radius of 22mn kilometres . Our habitat is 8 kilo parsec from sag A* , it\'s mass is enormous it can completely stretch out the space time fabric , each minute we spent here it\'s __ in Earth',
-  image: 'RS4.jpg',
+  image: 'sag2.gif',
   options: [
     {
       text: '700 years',
@@ -2235,7 +2235,7 @@ const textNodes = [
 {
   id: 119,
   text: 'That\'s right. Let\'s move on',
-  image: 'default-image.jpg',
+  image: 'sag2.gif',
   options: [
     {
       text: '← Back',
@@ -2267,7 +2267,7 @@ const textNodes = [
 {
   id: 120,
   text: 'Beep beep !!! The energy X ray flare are increasing . What is causing the  increase in flares ? ',
-  image: 'RS4.jpg',
+  image: 'sag3.gif',
   options: [
     {
       text: 'Dark halo',
@@ -2290,7 +2290,7 @@ const textNodes = [
 {
   id: 122,
   text: 'That\'s right. Let\'s move on',
-  image: 'default-image.jpg',
+  image: 'sag3.gif',
   options: [
     {
       text: '← Back',
@@ -2298,7 +2298,7 @@ const textNodes = [
     },
     {
       text: 'Next',
-      nextText: 123
+      nextText: 124
     },
   ]
 },
@@ -2322,104 +2322,144 @@ const textNodes = [
 // CLUES
 {
   id: 124,
-  text: 'Wait I guess it\'s a <b>clue</b>! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  text: 'Wait I guess it\'s a clue! Keep this in mind or take a screenshot. It might help you crack the final answer.',
   image: 'Clue1.jpg',
   options: [
-    
+    {
+      text: '← Back',
+      nextText: 120
+    },
+    {
+      text: 'Next',
+      nextText: 123
+    },
   ]
 },
 {
   id: 125,
-  text: 'Oh its another <b>clue</b>! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  text: 'Oh its another clue! Keep this in mind or take a screenshot. It might help you crack the final answer.',
   image: 'Clue2.png',
   options: [
-    
+    {
+      text: '← Back',
+      nextText: 111
+    },
+    {
+      text: 'Next',
+      nextText: 123
+    },
   ]
 },
 {
   id: 126,
-  text: 'There\'s another <b>clue</b>! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  text: 'There\'s another clue! Keep this in mind or take a screenshot. It might help you crack the final answer.',
   image: 'Clue3.png',
   options: [
-    
+    {
+      text: '← Back',
+      nextText: 96
+    },
+    {
+      text: 'Next',
+      nextText: 123
+    },
   ]
 },
 {
   id: 127,
-  text: 'There\'s another <b>clue</b>! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  text: 'There\'s another clue! Keep this in mind or take a screenshot. It might help you crack the final answer.',
   image: 'Clue4.jpg',
   options: [
-    
+    {
+      text: '← Back',
+      nextText: 87
+    },
+    {
+      text: 'Next',
+      nextText: 123
+    },
   ]
 },
 {
   id: 128,
-  text: 'There\'s another <b>clue</b>! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  text: 'There\'s another clue! Keep this in mind or take a screenshot. It might help you crack the final answer.',
   image: 'Clue5.jpg',
   options: [
-    
+    {
+      text: '← Back',
+      nextText: 72
+    },
+    {
+      text: 'Next',
+      nextText: 22
+    },
   ]
 },
 {
   id: 129,
-  text: 'There\'s another <b>clue</b>! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  text: 'There\'s another clue! Keep this in mind or take a screenshot. It might help you crack the final answer.',
   image: 'Clue6.jpg',
   options: [
-    
+    {
+      text: '← Back',
+      nextText: 59
+    },
+    {
+      text: 'Next',
+      nextText: 22
+    },
   ]
 },
 {
   id: 130,
-  text: 'There\'s another <b>clue</b>! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  text: 'Oh that\'s a clue! Keep this in mind or take a screenshot. It might help you crack the final answer.',
   image: 'Clue7.png',
   options: [
-    
+    {
+      text: '← Back',
+      nextText: 47
+    },
+    {
+      text: 'Next',
+      nextText: 22
+    },
+  ]
+},
+{
+  id: 131,
+  text: 'Woah it\'s a clue!! Keep this in mind or take a screenshot. It might help you crack the final answer.',
+  image: 'Clue8.png',
+  options: [
+    {
+      text: '← Back',
+      nextText: 35
+    },
+    {
+      text: 'Next',
+      nextText: 22
+    },
   ]
 },
 
 
+// Final doc
+{
+  id: 132,
+  text: 'It seems you had a great journey! Scan the QR code and type in the keyword you decoded from the clues.',
+  image: 'quest.png',
+  options: [
+    {
+      text: '← Back',
+      nextText: 123
+    },
+    {
+      text: 'Start from beginning',
+      nextText: 1
+    },
+  ]
+},
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  {
-    id: 2,
-    text: 'But before they venture forth they have to solve a set of problems. Let\'s address them one by one.',
-    options: [
-      {
-        text: 'Trade the goo for a sword',
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, sword: true },
-        nextText: 3
-      },
-      {
-        text: 'Trade the goo for a shield',
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, shield: true },
-        nextText: 3
-      },
-      {
-        text: 'Ignore the merchant',
-        nextText: 3
-      }
-    ]
-  },  
 ]
 
 startGame()
