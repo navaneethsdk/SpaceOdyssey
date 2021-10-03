@@ -1660,7 +1660,7 @@ const textNodes = [
 // Neutron 5
 {
   id: 87,
-  text: 'It seems that a Neutron star is like a giant nucleus with a few kms of radius although they owe their existence to something majestic. What can you relate a neutron star with?',
+  text: 'A Neutron star has a mass about 1.4 times that of the sun. Although the size of a neutron star is comparable with _____',
   image: 'NS5.jpeg',
   options: [
     {
