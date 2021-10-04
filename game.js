@@ -418,7 +418,7 @@ const textNodes = [
       },
     ]
   },
-  // Meeting point 1
+  // Meeting point 2
   {
     id: 123,
     text: 'Hmm... I guess we are now presented with another set of 4 alien language options. I think this might be it! Let\'s get going...',
@@ -461,10 +461,10 @@ const textNodes = [
       }
     ]
   },
-  // Meeting point 2
+  // Meeting point 1
   {
     id: 22,
-    text: ' Hmm.. the instruction semms to be in some unknow language. Ready to make a guess?',
+    text: ' Hmm.. the options seems to be in some unknow language. Ready to make a leap of faith? Let\'s see where it takes us',
     image: 'alienAst.jpg',
     options: [
       {
